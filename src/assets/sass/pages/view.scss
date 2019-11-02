@@ -1,0 +1,19 @@
+.horizontal-features {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    li {
+        margin-right: $gutter;
+        color: $gray;
+        font-size: .8rem;
+
+        img {
+            margin-right: 10px;
+        }
+    }
+}
+
+.job-view {
+    margin-bottom: $gutter * 2;
+}

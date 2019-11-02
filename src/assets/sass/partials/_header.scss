@@ -1,0 +1,50 @@
+#header {
+    background: #fff url('../images/hero-bg.jpg') no-repeat center right /cover;
+    display: flex;
+    min-height: 40vh;
+    padding-bottom: $gutter * 2;
+
+    &.page-home {
+        padding: 0 0 50px;
+        min-height: 70vh;
+    }
+
+    .header-nav {
+        width: 100%;
+        flex-direction: row;
+        align-content: space-between;
+        margin-top: 20px;
+        margin-bottom: $gutter * 3;
+        display: flex;
+
+        nav {
+            margin-left: auto;
+            margin-right: $gutter * 2;
+
+            a {
+                font-size: .85rem;
+                font-weight: 800;
+                color: $darkGray;
+                text-decoration: none;
+                padding: 10px;
+            }
+        }
+    }
+    .header-logo {
+        width: 130px;
+    }
+
+    p {
+        color: $gray;
+        max-width: 50%;
+        font-size: .9rem;
+    }
+
+    a {
+        color: lighten($darkBlue, 50%);
+    }
+
+    .header-filter {
+        margin-top: $gutter * 3;
+    }
+}

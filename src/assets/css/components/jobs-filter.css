@@ -1,0 +1,50 @@
+.result-not-found {
+  align-items: center;
+  padding-top: 30px; }
+  .result-not-found h2 {
+    margin: 30px 0 10px; }
+
+#jobsFilter {
+  max-width: 760px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fff;
+  flex-wrap: wrap;
+  border-radius: 5px; }
+  #jobsFilter .filter-field {
+    display: flex;
+    flex-direction: column;
+    margin: -30px 15px;
+    width: calc(100% / 3); }
+    #jobsFilter .filter-field label {
+      color: #111111;
+      margin-left: -25px;
+      font-size: .8rem;
+      font-weight: 600;
+      margin-top: -60px;
+      margin-bottom: 35px;
+      display: flex;
+      align-items: center; }
+      #jobsFilter .filter-field label img {
+        margin-right: 10px;
+        max-height: 20px; }
+  #jobsFilter select {
+    appearance: none;
+    color: #606060;
+    border: 0;
+    font-size: .9rem;
+    width: 100%;
+    padding: 5px 0;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMTI5IDEyOSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTI5IDEyOSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij48Zz48Zz4KICAgIDxwYXRoIGQ9Im0xMjEuMywzNC42Yy0xLjYtMS42LTQuMi0xLjYtNS44LDBsLTUxLDUxLjEtNTEuMS01MS4xYy0xLjYtMS42LTQuMi0xLjYtNS44LDAtMS42LDEuNi0xLjYsNC4yIDAsNS44bDUzLjksNTMuOWMwLjgsMC44IDEuOCwxLjIgMi45LDEuMiAxLDAgMi4xLTAuNCAyLjktMS4ybDUzLjktNTMuOWMxLjctMS42IDEuNy00LjIgMC4xLTUuOHoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiIGZpbGw9IiNDNEM0QzQiLz4KICA8L2c+PC9nPiA8L3N2Zz4K");
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: 1rem auto, 100%; }
+
+.filter-none {
+  text-align: center;
+  grid-column: 1 / 4; }
+
+/*# sourceMappingURL=jobs-filter.css.map */
