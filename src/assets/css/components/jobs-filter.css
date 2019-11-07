@@ -30,6 +30,12 @@
       #jobsFilter .filter-field label img {
         margin-right: 10px;
         max-height: 20px; }
+    @media screen and (max-width: 768px) {
+      #jobsFilter .filter-field {
+        margin: 15px 20px;
+        width: 100%; }
+        #jobsFilter .filter-field label {
+          margin: 0; } }
   #jobsFilter select {
     appearance: none;
     color: #606060;
@@ -42,6 +48,15 @@
     background-repeat: no-repeat, repeat;
     background-position: right .7em top 50%, 0 0;
     background-size: 1rem auto, 100%; }
+    @media screen and (max-width: 768px) {
+      #jobsFilter select {
+        background-color: #f9f9f9;
+        padding: 15px;
+        margin-top: 10px; } }
+  @media screen and (max-width: 768px) {
+    #jobsFilter #jobsfilter-submit {
+      margin: 15px 20px 10px;
+      width: 100%; } }
 
 .filter-none {
   text-align: center;

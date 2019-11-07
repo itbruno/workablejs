@@ -4,6 +4,10 @@
     min-height: 40vh;
     padding-bottom: $gutter * 2;
 
+    @media screen and (max-width: $media-sm) {
+        background-image: none;
+    }
+
     &.page-home {
         padding: 0 0 50px;
         min-height: 70vh;
@@ -17,9 +21,17 @@
         margin-bottom: $gutter * 3;
         display: flex;
 
+        @media screen and (max-width: $media-sm) {
+            margin-bottom: $gutter;
+        }
+
         nav {
             margin-left: auto;
             margin-right: $gutter * 2;
+            
+            @media screen and (max-width: $media-sm) {
+                margin-right: 0;
+            }
 
             a {
                 font-size: .85rem;
@@ -32,12 +44,20 @@
     }
     .header-logo {
         width: 130px;
+        
+        @media screen and (max-width: $media-sm) {
+            width: 160px;
+        }
     }
 
     p {
         color: $gray;
         max-width: 50%;
         font-size: .9rem;
+        
+        @media screen and (max-width: $media-sm) {
+            max-width: 100%;
+        }
     }
 
     a {
@@ -46,5 +66,9 @@
 
     .header-filter {
         margin-top: $gutter * 3;
+
+        @media screen and (max-width: $media-sm) {
+            margin-top: $gutter / 2;
+        }
     }
 }

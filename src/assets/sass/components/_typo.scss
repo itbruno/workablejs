@@ -6,5 +6,9 @@ h1 {
 
     &.h1-medium {
         font-size: 2rem;
+
+        @media screen and (max-width: $media-sm) {
+            font-size: 1.5em;
+        }
     }
 }

@@ -16,7 +16,7 @@
         flex-direction: column;
         margin: -$gutter ($gutter / 2);
         width: calc(100% / 3);
-
+        
         label {
             color: #111111;
             margin-left: -25px;
@@ -30,6 +30,15 @@
             img {
                 margin-right: 10px;
                 max-height: 20px;
+            }
+        }
+
+        @media screen and (max-width: $media-sm) {
+            margin: 15px 20px;
+            width: 100%;
+
+            label {
+                margin: 0;
             }
         }
     }
@@ -46,6 +55,19 @@
         background-repeat: no-repeat, repeat;
         background-position: right .7em top 50%, 0 0;
         background-size: 1rem auto, 100%;
+
+        @media screen and (max-width: $media-sm) {
+            background-color: #f9f9f9;
+            padding: $gutter / 2;
+            margin-top: 10px;
+        }
+    }
+
+    @media screen and (max-width: $media-sm){
+        #jobsfilter-submit {
+            margin: 15px 20px 10px;
+            width: 100%;
+        }
     }
 }
 

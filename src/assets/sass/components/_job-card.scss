@@ -7,6 +7,14 @@ $jobCardSpacing: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: $jobCardSpacing;
+
+    @media screen and (max-width: $media-md) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: $media-sm) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .jobCard {
