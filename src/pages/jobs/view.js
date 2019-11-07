@@ -38,7 +38,7 @@ class ViewJob extends Component {
                     <link rel="canonical" href={job.url} />
                     
                 </Helmet>
-                <header id="header" class="reset-bg">
+                <header id="header" className="reset-bg">
                     <div className="container">
                         <HeaderNav />
                         <h1 data-loading={loadingData} className="h1-medium">{ job.full_title }</h1>
