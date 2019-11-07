@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+
 import HeaderNav from '../../components/partials/HeaderNav';
 import iconBriefcase from '../../assets/images/icons/briefcase.svg';
 import iconLocation from '../../assets/images/icons/pin-location.svg';
@@ -31,7 +33,12 @@ class ViewJob extends Component {
 
         return(
             <>
-                <header id="header">
+                <Helmet>
+                    <title>{ `${job.full_title} | WorkableJS` || 'aa' }</title>
+                    <link rel="canonical" href={job.url} />
+                    
+                </Helmet>
+                <header id="header" class="reset-bg">
                     <div className="container">
                         <HeaderNav />
                         <h1 data-loading={loadingData} className="h1-medium">{ job.full_title }</h1>

@@ -1,8 +1,13 @@
 #header {
-    background: #fff url('../images/hero-bg.jpg') no-repeat center right /cover;
+    background: #fff url('../images/hero-bg.jpg') no-repeat 100% center /contain;
     display: flex;
     min-height: 40vh;
     padding-bottom: $gutter * 2;
+
+    &.reset-bg {
+        background-color: #fff;
+        background-image: none;
+    }
 
     @media screen and (max-width: $media-sm) {
         background-image: none;
@@ -18,7 +23,7 @@
         flex-direction: row;
         align-content: space-between;
         margin-top: 20px;
-        margin-bottom: $gutter * 3;
+        margin-bottom: $gutter * 2;
         display: flex;
 
         @media screen and (max-width: $media-sm) {

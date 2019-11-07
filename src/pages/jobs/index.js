@@ -26,7 +26,7 @@ class Jobs extends Component {
                         <HeaderNav />
                         
 
-                        <h1>Work at <strong>MyCompany</strong></h1>
+                        <h1>Work at <strong className="block">MyCompany</strong></h1>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit praesentium similique beatae.
                         </p>
