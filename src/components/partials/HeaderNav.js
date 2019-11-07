@@ -8,11 +8,6 @@ class HeaderNav extends Component {
                 <a href="/" className="header-logo">
                     <img src={logo} className="img-responsive" alt="MyWork logo"/>
                 </a>
-
-                <nav>
-                    <a href="/">About</a>
-                    <a href="/">Contact</a>
-                </nav>
             </div>
         )
     }
