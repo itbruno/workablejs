@@ -40,7 +40,7 @@ class ViewJob extends Component {
             const currentJob = this.state.job;
             
             const relatedJobs = lcJobsParsed.filter( e => {
-                return e.id != currentJob.id && e.department === currentJob.department
+                return e.id !== currentJob.id && e.department === currentJob.department
             });
             
             this.setState({ relatedJobs: relatedJobs.slice(0,3) });

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import iconPin from '../../assets/images/icons/pin-location.svg';
 import iconBriefcase from '../../assets/images/icons/briefcase.svg';
 
@@ -21,7 +20,7 @@ class JobCard extends Component {
                 </ul>
 
                 <div className="jobCard-actions">
-                    <Link className="btn" to={`/jobs/view/${this.props.link}`}>More details</Link>
+                    <a className="btn" href={`/jobs/view/${this.props.link}`}>More details</a>
                 </div>
             </div>
         )
