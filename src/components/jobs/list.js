@@ -11,6 +11,8 @@ class List extends Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0, 0);
+        
         var lcJobs = window.localStorage.getItem('jobs');
 
         if(lcJobs) {
@@ -68,7 +70,7 @@ class List extends Component {
                 <h2>Nenhuma vaga encontrada para o filtro!</h2>
                 <p>Não desista, continue sua busca!</p>
             </div>
-            <div id="jobsList">
+            <div id="jobsList" className="padding-md">
                 {jobs.map((j) => (
                     <JobCard 
                         key={ j.id }
