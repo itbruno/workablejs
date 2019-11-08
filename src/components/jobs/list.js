@@ -11,8 +11,6 @@ class List extends Component {
     }
 
     componentDidMount() {
-        window.scrollTo(0, 0);
-        
         var lcJobs = window.localStorage.getItem('jobs');
 
         if(lcJobs) {

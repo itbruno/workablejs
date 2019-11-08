@@ -20,7 +20,6 @@ class ViewJob extends Component {
     }
 
     async componentDidMount() {
-        window.scrollTo(0, 0);
 
         await api.get(`/jobs/view/${this.state.id}`)
             .then(res => {
