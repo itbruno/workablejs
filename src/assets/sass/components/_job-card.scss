@@ -2,14 +2,11 @@ $jobCardSpacing: 20px;
 
 #jobsList {
     max-width: 1000px;
-    margin: $gutter auto;
+    margin-top: $gutter;
+    margin-bottom: $gutter;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: $jobCardSpacing;
-
-    &.padding-md {
-        padding: $gutter / 2 ;
-    }
 
     @media screen and (max-width: $media-md) {
         grid-template-columns: 1fr 1fr;
