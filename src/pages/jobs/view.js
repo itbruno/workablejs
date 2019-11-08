@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import api from '../../services/api';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import JobCard from '../../components/jobCard';
 
 import HeaderNav from '../../components/partials/HeaderNav';
 import iconBriefcase from '../../assets/images/icons/briefcase.svg';
@@ -14,30 +15,51 @@ class ViewJob extends Component {
         job: {},
         jobLocation: {},
         fail: false,
-        loadingData: true
+        loadingData: true,
+        relatedJobs: []
     }
 
     async componentDidMount() {
+
         await api.get(`/jobs/view/${this.state.id}`)
             .then(res => {
                 this.setState({ job: res.data, jobLocation: res.data.location });
-                this.setState({ loadingData: false })
+                this.setState({ loadingData: false });
             })
-            .catch(err => this.setState({ fail: true }));
+            .catch(err => {this.setState({ fail: true });  console.error(err); });
+
+            this.getRelatedJobs();
+    }
+
+    getRelatedJobs() {
+        const lcJobs = window.localStorage.getItem('jobs');
+        
+        if(lcJobs) {
+            const lcJobsParsed = JSON.parse(lcJobs);
+            const currentJob = this.state.job;
+            
+            const relatedJobs = lcJobsParsed.filter( e => {
+                return e.id !== currentJob.id && e.department === currentJob.department
+            });
+            
+            this.setState({ relatedJobs: relatedJobs.slice(0,3) });
+        }
     }
 
     render() {
-        const { job } = this.state;
-        const { jobLocation } = this.state;
-        const { loadingData } = this.state;
-
+        const { 
+            job, 
+            jobLocation,
+            loadingData,
+            relatedJobs } = this.state;
+        
         return(
             <>
                 <Helmet>
                     <title>{ `${job.full_title} | WorkableJS` || 'aa' }</title>
                     <link rel="canonical" href={job.url} />
-                    
                 </Helmet>
+
                 <header id="header" className="reset-bg">
                     <div className="container">
                         <HeaderNav />
@@ -76,6 +98,30 @@ class ViewJob extends Component {
                         </div>
                     </div>
                 </div>
+
+                {
+                    relatedJobs.length > 0  ? (
+                        <div id="related-jobs">
+                            <div className="container">
+                                <h2>Related jobs</h2>
+                                <div id="jobsList">
+                                    {
+                                        relatedJobs.map(e => (
+                                            <JobCard 
+                                                key={ e.id }
+                                                title={e.title}
+                                                department={e.department}
+                                                location={e.location.region}
+                                                country={e.location.country_code}
+                                                link={e.shortcode}
+                                            />
+                                        ))
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    ) : ''
+                }
             </>
         )
     }

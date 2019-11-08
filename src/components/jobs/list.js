@@ -68,18 +68,20 @@ class List extends Component {
                 <h2>Nenhuma vaga encontrada para o filtro!</h2>
                 <p>Não desista, continue sua busca!</p>
             </div>
-            <div id="jobsList">
-                {jobs.map((j) => (
-                    <JobCard 
-                        key={ j.id }
-                        title={j.title}
-                        department={j.department}
-                        location={j.location.region}
-                        country={j.location.country_code}
-                        link={j.shortcode}
-                    />
-                    )
-                )}
+            <div className="container">
+                <div id="jobsList" className="padding-md">
+                    {jobs.map((j) => (
+                        <JobCard 
+                            key={ j.id }
+                            title={j.title}
+                            department={j.department}
+                            location={j.location.region}
+                            country={j.location.country_code}
+                            link={j.shortcode}
+                        />
+                        )
+                    )}
+                </div>
             </div>
             </>
         )
