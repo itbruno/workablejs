@@ -21,13 +21,13 @@ class ViewJob extends Component {
 
     async componentDidMount() {
         window.scrollTo(0, 0);
-        
+
         await api.get(`/jobs/view/${this.state.id}`)
             .then(res => {
                 this.setState({ job: res.data, jobLocation: res.data.location });
                 this.setState({ loadingData: false });
             })
-            .catch(err => this.setState({ fail: true }));
+            .catch(err => {this.setState({ fail: true });  console.error(err); });
 
             this.getRelatedJobs();
     }
