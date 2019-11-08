@@ -99,25 +99,29 @@ class ViewJob extends Component {
                     </div>
                 </div>
 
-                <div id="related-jobs">
-                    <div className="container">
-                        <h2>Related jobs</h2>
-                        <div id="jobsList">
-                            {
-                                relatedJobs.map(e => (
-                                    <JobCard 
-                                        key={ e.id }
-                                        title={e.title}
-                                        department={e.department}
-                                        location={e.location.region}
-                                        country={e.location.country_code}
-                                        link={e.shortcode}
-                                    />
-                                ))
-                            }
+                {
+                    relatedJobs.length > 0  ? (
+                        <div id="related-jobs">
+                            <div className="container">
+                                <h2>Related jobs</h2>
+                                <div id="jobsList">
+                                    {
+                                        relatedJobs.map(e => (
+                                            <JobCard 
+                                                key={ e.id }
+                                                title={e.title}
+                                                department={e.department}
+                                                location={e.location.region}
+                                                country={e.location.country_code}
+                                                link={e.shortcode}
+                                            />
+                                        ))
+                                    }
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    ) : ''
+                }
             </>
         )
     }
