@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
+    "node-sass": "^4.13.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
@@ -12,9 +13,10 @@
     "webfontloader": "^1.6.28"
   },
   "scripts": {
-    "sass": "sass --watch src/assets/sass:src/assets/css",
+    "sass": "nodemon -e scss -x \"yarn sass-build\"",
+    "sass-build": "node-sass src/assets/sass -o src/assets/css --output-style compressed",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "yarn sass-build && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -32,5 +34,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
   }
 }
