@@ -1,0 +1,32 @@
+.mouse {
+    width: 30px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 100px;
+    position: relative;
+    display: block;
+    transition: all .3s ease;
+
+    &:before {
+        content: '';
+        background: #fff;
+        width: 3px;
+        height: 6px;
+        display: block;
+        border-radius: 10px;
+        position: absolute;
+        top: 10px;
+        left: 12px;
+        animation: mouse .5s infinite;
+    }
+}
+
+@keyframes mouse {
+    0% {
+        top: 10px;
+    }
+
+    50% {
+        top: 12px;
+    }
+}

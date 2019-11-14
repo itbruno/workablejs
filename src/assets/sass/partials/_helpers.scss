@@ -5,3 +5,9 @@
 .padding-reset {
     padding: 0;
 }
+
+.hidden-sm {
+    @media screen and (max-width: $media-sm) {
+        display: none;
+    }
+}
