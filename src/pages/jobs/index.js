@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import List from '../../components/jobs/list';
 import JobsFilter from "../../components/jobs/filter";
-import api from '../../services/api';
 import HeaderNav from '../../components/partials/HeaderNav';
 
 import heroImage from '../../assets/images/hero-image.png';
@@ -12,15 +11,6 @@ class Jobs extends Component {
         companyData: {}
     }
   
-    componentDidMount() {
-        this.companyInfo();
-    }
-
-    companyInfo = async () => {
-        const companyData = await api.get('/company').then(res => res.data).catch(err => err);
-        this.setState({ companyData });
-    }
-
     render() {
         
         return (
